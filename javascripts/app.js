@@ -119,12 +119,12 @@ function logTravel(rover) {
   });
 } 
 
-function receiveCommand(commands) {
+function command(commands) {
   for (let i = 0; i < commands.length; i++) {
-    const command = commands[i];
+    const c = commands[i];
 
     // just have it log when moving forward / backwards - otherwise roaver is just moving on the spot
-    switch (command) {
+    switch (c) {
       case "f":
         moveForward(rover);
         logTravel(rover);
@@ -150,6 +150,6 @@ function receiveCommand(commands) {
 
 }
 
-receiveCommand('llflbbfrfflrrrrrllrfff');
+command('llflbbfrfflrrrrrllrfff');
 
 console.log(rover);
